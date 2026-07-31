@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="รายละเอียดผลงาน Smart Trashcan ของ Phuwadon" />
+    <title>Smart Trashcan | Project Detail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="project-detail.css" />
+  </head>
+  <body>
+    <main class="page">
+      <a class="back-link" href="index.html#projects">← กลับไปหน้าผลงานเด่น</a>
+
+      <section class="hero">
+        <span class="badge">IoT & Hardware</span>
+        <h1>Smart Trashcan (IoT)</h1>
+        <p class="summary">
+          โปรเจกต์ระบบถังขยะอัจฉริยะที่ผสานการทำงานของฮาร์ดแวร์และซอฟต์แวร์ สามารถวัดอุณหภูมิและความชื้นรอบตัว มีระบบเซ็นเซอร์เปิดฝาอัตโนมัติเมื่อผู้ใช้อยู่ในระยะ และควบคุมการขับเคลื่อนมอเตอร์ให้ถังขยะเคลื่อนที่เข้าหาผู้ใช้ได้ผ่าน Web Dashboard
+        </p>
+
+        <div class="meta">
+          <div>
+            <span>บทบาทที่รับผิดชอบ</span>
+            <strong>Circuit Design, Firmware Programming, Web Integration</strong>
+          </div>
+          <div>
+            <span>เครื่องมือที่ใช้</span>
+            <strong>ESP32, HC-SR04, BME280 & DHT11, L298N (Motor Driver), Servo MG996R, LM2596, Arduino IDE, C/C++, Blynk web, Fritzing</strong>
+          </div>
+          <div>
+            <span>ปีที่จัดทำ</span>
+            <strong>2026</strong>
+          </div>
+        </div>
+
+        <div class="grid">
+          <article class="panel">
+            <h2>สิ่งที่ทำในโปรเจกต์</h2>
+            <ul>
+              <li>ออกแบบและต่อวงจรฮาร์ดแวร์ จัดการระบบจ่ายไฟ ให้กับอุปกรณ์</li>
+              <li>เขียนโค้ดภาษา C/C++ ควบคุมเซ็นเซอร์ Ultrasonic และ Servo Motor สำหรับฝาถัง</li>
+              <li>พัฒนาระบบสื่อสารระหว่าง ESP32 และ IoT Dashboard (Blynk) ผ่าน Wi-Fi</li>
+              <li>ทดสอบและแก้ปัญหาการทำงานร่วมกันของระบบเคลื่อนที่ (L298N) และการรับส่งค่าแบบ Real-time</li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <h2>ลิงก์โค้ด</h2>
+            <p class="summary">สามารถเข้าชมซอร์สโค้ดและรายละเอียดโครงสร้างไฟล์เพิ่มเติมได้ที่ GitHub</p>
+            <a class="github-link" href="https://github.com/Phuwadon999/Smart_TrashCan" target="_blank" rel="noreferrer noopener">https://github.com/Phuwadon999/Smart_TrashCan</a>
+          </article>
+        </div>
+
+        <div class="gallery">
+          <figure class="figure">
+            <img class="zoomable" data-caption="ต้นแบบ Smart Trashcan" src="PJ/Pj1_ST/realbin.jpg" alt="รูปถังขยะอัจฉริยะต้นแบบจริง" />
+            <figcaption>ต้นแบบฮาร์ดแวร์ของจริง</figcaption>
+          </figure>
+          <figure class="figure">
+            <img class="zoomable" data-caption="หน้า Web Dashboard" src="PJ/Pj1_ST/web_controlbin.png" alt="หน้าเว็บสำหรับควบคุมถังขยะ" />
+            <figcaption>หน้า Web Dashboard</figcaption>
+          </figure>
+          <figure class="figure">
+            <img class="zoomable" data-caption="รองรับการควบคุมผ่านมือถือ" src="PJ/Pj1_ST/mobile_controlbin.jpg" alt="หน้าควบคุมผ่านมือถือ" />
+            <figcaption>การควบคุมผ่าน Mobile App</figcaption>
+          </figure>
+          <figure class="figure">
+            <img class="zoomable" data-caption="โครงสร้างวงจรภาพรวม (Fritzing)" src="PJ/Pj1_ST/bin1_fzz.png" alt="แบบวงจรของระบบถังขยะอัจฉริยะ" />
+            <figcaption>โครงสร้างวงจรภาพรวม (Fritzing)</figcaption>
+          </figure>
+          <figure class="figure">
+            <img class="zoomable" data-caption="รายละเอียดการเชื่อมต่อวงจร" src="PJ/Pj1_ST/bin_fzz.png" alt="ภาพวงจรอีกมุมมอง" />
+            <figcaption>รายละเอียดการเชื่อมต่อสายไฟ</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

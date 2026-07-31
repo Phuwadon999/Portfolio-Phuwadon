@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="รายละเอียดผลงาน PM Project ของ Phuwadon" />
+    <title>PM Project | Project Detail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="project-detail.css" />
+  </head>
+  <body>
+    <main class="page">
+      <a class="back-link" href="index.html#projects">← กลับไปหน้าผลงานเด่น</a>
+
+      <section class="hero">
+        <span class="badge">IoT & Hardware</span>
+        <h1>PM Project</h1>
+        <p class="summary">
+          โปรเจกต์ตรวจวัดคุณภาพอากาศและตรวจจับบุคคล แสดงผลแบบ Real-time ผ่านหน้าจอ TFT Touch Screen 2.8" และ OLED ผสานการทำงานของเซ็นเซอร์ PMS5003 และเรดาร์ HLK-LD2410C อย่างแม่นยำ
+        </p>
+
+        <div class="meta">
+          <div>
+            <span>บทบาทที่รับผิดชอบ</span>
+            <strong>System Integrator, Circuit Design, Coding</strong>
+          </div>
+          <div>
+            <span>เครื่องมือที่ใช้</span>
+            <strong>ESP32, PMS5003 (Dust Sensor), HLK-LD2410C (Radar), TFT 2.8" Touch, OLED 0.96", Arduino IDE, C/C++, Blynk web, Fritzing</strong>
+          </div>
+          <div>
+            <span>ปีที่จัดทำ</span>
+            <strong>2026</strong>
+          </div>
+        </div>
+
+        <div class="grid">
+          <article class="panel">
+            <h2>สิ่งที่ทำในโปรเจกต์</h2>
+            <ul>
+              <li>ออกแบบและประกอบวงจรฮาร์ดแวร์ ผสานการทำงานของโมดูลและเซ็นเซอร์หลายชนิดเข้าด้วยกัน</li>
+              <li>เขียนโค้ดภาษา C/C++ เพื่ออ่านค่าฝุ่นจาก PMS5003 และค่าการเคลื่อนไหวจากเรดาร์ HLK-LD2410C</li>
+              <li>พัฒนาระบบแสดงผล (UI) บนอุปกรณ์ฮาร์ดแวร์ผ่านหน้าจอ TFT Touch Screen และจอ OLED 0.96"</li>
+              <li>เชื่อมต่อระบบรับส่งข้อมูลผ่าน Wi-Fi เพื่อแสดงผลบนหน้า Web Dashboard (Blynk) แบบ Real-time</li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <h2>ลิงก์โค้ด</h2>
+            <p class="summary">สามารถเข้าชมซอร์สโค้ดและรายละเอียดโครงสร้างไฟล์เพิ่มเติมได้ที่ GitHub</p>
+            <a class="github-link" href="https://github.com/Phuwadon999/PM" target="_blank" rel="noreferrer noopener">https://github.com/Phuwadon999/PM</a>
+          </article>
+        </div>
+
+        <div class="gallery">
+          <figure class="figure">
+            <img class="zoomable" data-caption="ต้นแบบอุปกรณ์จริง" src="PJ/Pj2_PM/pm_real.jpg" alt="ภาพต้นแบบจริงของโปรเจกต์ PM" />
+            <figcaption>ต้นแบบอุปกรณ์ฮาร์ดแวร์จริง</figcaption>
+          </figure>
+          <figure class="figure">
+            <img class="zoomable" data-caption="หน้าเว็บควบคุม/แสดงผล" src="PJ/Pj2_PM/web_pm.png" alt="หน้าเว็บของโปรเจกต์ PM" />
+            <figcaption>หน้า Dashboard ควบคุมและแสดงผล</figcaption>
+          </figure>
+          <figure class="figure">
+            <img class="zoomable" data-caption="การแสดงผลบนมือถือ" src="PJ/Pj2_PM/mobile_pm.jpg" alt="หน้าเว็บบนอุปกรณ์มือถือ" />
+            <figcaption>การแสดงผลบนโทรศัพท์มือถือ</figcaption>
+          </figure>
+          <figure class="figure">
+            <img class="zoomable" data-caption="โครงสร้างวงจรภาพรวม (Fritzing)" src="PJ/Pj2_PM/pm1_fzz.png" alt="ภาพวงจร Fritzing ของ PM" />
+            <figcaption>โครงสร้างวงจรภาพรวม (Fritzing)</figcaption>
+          </figure>
+          <figure class="figure">
+            <img class="zoomable" data-caption="รายละเอียดการเชื่อมต่อสายไฟ" src="PJ/Pj2_PM/pm2_fzz.png" alt="ภาพวงจร Fritzing ของ PM อีกชุด" />
+            <figcaption>รายละเอียดการเชื่อมต่อสายไฟ</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
