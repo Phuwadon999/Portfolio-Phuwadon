@@ -37,10 +37,6 @@ body {
   overflow-x: hidden;
 }
 
-body.is-ready {
-  /* animation moved to .page so fixed image modal stays anchored to the viewport */
-}
-
 body::before {
   content: "";
   position: fixed;
