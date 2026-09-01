@@ -54,7 +54,12 @@
           </article>
         </div>
 
-        <div class="gallery">
+        <div class="gallery gallery--carousel" data-gallery>
+          <div class="gallery__toolbar">
+            <button class="gallery__button" type="button" data-gallery-prev aria-label="ดูภาพก่อนหน้า">ก่อนหน้า</button>
+            <span class="gallery__counter" data-gallery-counter aria-live="polite">1 / 8</span>
+            <button class="gallery__button" type="button" data-gallery-next aria-label="ดูภาพถัดไป">ถัดไป</button>
+          </div>
           <figure class="figure">
             <img class="zoomable" data-caption="หน้า Home" src="PJ/Pj3_emailweb/Homepage.png" alt="หน้าหลักของระบบอีเมล" />
             <figcaption>หน้า Landing Page (Home)</figcaption>

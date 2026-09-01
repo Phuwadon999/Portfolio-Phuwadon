@@ -2,7 +2,8 @@ const year = document.getElementById('year');
 const revealElements = document.querySelectorAll('.reveal');
 const projectCards = document.querySelectorAll('[data-href]');
 const zoomables = document.querySelectorAll('.zoomable');
-const useModalZoom = /(^|\/)project-[^/]+\.html$/i.test(window.location.pathname);
+const galleries = document.querySelectorAll('[data-gallery]');
+const useModalZoom = true;
 
 if (year) {
   year.textContent = new Date().getFullYear();
@@ -50,16 +51,40 @@ projectCards.forEach((card) => {
   });
 });
 
-const openImageViewer = (imageElement) => {
-  const fullSource = imageElement.getAttribute('data-fullsrc') || imageElement.currentSrc || imageElement.src;
-  const caption = imageElement.getAttribute('data-caption') || imageElement.alt || '';
+galleries.forEach((gallery) => {
+  const figures = [...gallery.querySelectorAll('.figure')];
+  const counter = gallery.querySelector('[data-gallery-counter]');
+  const previousButton = gallery.querySelector('[data-gallery-prev]');
+  const nextButton = gallery.querySelector('[data-gallery-next]');
+  let activeIndex = 0;
 
-  const viewerUrl = new URL('image-viewer.html', window.location.href);
-  viewerUrl.searchParams.set('src', fullSource);
-  viewerUrl.searchParams.set('caption', caption);
+  const showImage = (index) => {
+    activeIndex = (index + figures.length) % figures.length;
+    figures.forEach((figure, figureIndex) => {
+      figure.classList.toggle('is-active', figureIndex === activeIndex);
+    });
+    counter.textContent = `${activeIndex + 1} / ${figures.length}`;
+  };
 
-  window.location.assign(viewerUrl.toString());
-};
+  previousButton.addEventListener('click', () => showImage(activeIndex - 1));
+  nextButton.addEventListener('click', () => showImage(activeIndex + 1));
+  gallery.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') showImage(activeIndex - 1);
+    if (event.key === 'ArrowRight') showImage(activeIndex + 1);
+  });
+
+  let touchStartX = 0;
+  gallery.addEventListener('touchstart', (event) => {
+    touchStartX = event.changedTouches[0].screenX;
+  }, { passive: true });
+  gallery.addEventListener('touchend', (event) => {
+    const distance = event.changedTouches[0].screenX - touchStartX;
+    if (Math.abs(distance) > 45) showImage(activeIndex + (distance < 0 ? 1 : -1));
+  }, { passive: true });
+
+  gallery.tabIndex = 0;
+  showImage(0);
+});
 
 const openImageModal = (imageElement) => {
   const existingModal = document.querySelector('.image-modal');
@@ -120,21 +145,13 @@ zoomables.forEach((image) => {
   image.addEventListener('click', (event) => {
     event.preventDefault();
     event.stopPropagation();
-    if (useModalZoom) {
-      openImageModal(image);
-    } else {
-      openImageViewer(image);
-    }
+    openImageModal(image);
   });
 
   image.addEventListener('keydown', (event) => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
-      if (useModalZoom) {
-        openImageModal(image);
-      } else {
-        openImageViewer(image);
-      }
+      openImageModal(image);
     }
   });
 });

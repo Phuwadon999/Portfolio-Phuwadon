@@ -16,7 +16,7 @@
 
       <section class="hero">
         <span class="badge">IoT & Hardware</span>
-        <h1>PM Project</h1>
+        <h1>PM Sensor Project</h1>
         <p class="summary">
           โปรเจกต์ตรวจวัดคุณภาพอากาศและตรวจจับบุคคล แสดงผลแบบ Real-time ผ่านหน้าจอ TFT Touch Screen 2.8" และ OLED ผสานการทำงานของเซ็นเซอร์ PMS5003 และเรดาร์ HLK-LD2410C อย่างแม่นยำ
         </p>
@@ -54,10 +54,15 @@
           </article>
         </div>
 
-        <div class="gallery">
+        <div class="gallery gallery--carousel" data-gallery>
+          <div class="gallery__toolbar">
+            <button class="gallery__button" type="button" data-gallery-prev aria-label="ดูภาพก่อนหน้า">ก่อนหน้า</button>
+            <span class="gallery__counter" data-gallery-counter aria-live="polite">1 / 5</span>
+            <button class="gallery__button" type="button" data-gallery-next aria-label="ดูภาพถัดไป">ถัดไป</button>
+          </div>
           <figure class="figure">
-            <img class="zoomable" data-caption="ต้นแบบอุปกรณ์จริง" src="PJ/Pj2_PM/pm_real.jpg" alt="ภาพต้นแบบจริงของโปรเจกต์ PM" />
-            <figcaption>ต้นแบบอุปกรณ์ฮาร์ดแวร์จริง</figcaption>
+            <img class="zoomable" data-caption="ต้นแบบอุปกรณ์" src="PJ/Pj2_PM/pm_real.jpg" alt="ภาพต้นแบบจริงของโปรเจกต์ PM" />
+            <figcaption>ต้นแบบอุปกรณ์ฮาร์ดแวร์</figcaption>
           </figure>
           <figure class="figure">
             <img class="zoomable" data-caption="หน้าเว็บควบคุม/แสดงผล" src="PJ/Pj2_PM/web_pm.png" alt="หน้าเว็บของโปรเจกต์ PM" />

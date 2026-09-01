@@ -54,10 +54,15 @@
           </article>
         </div>
 
-        <div class="gallery">
+        <div class="gallery gallery--carousel" data-gallery>
+          <div class="gallery__toolbar">
+            <button class="gallery__button" type="button" data-gallery-prev aria-label="ดูภาพก่อนหน้า">ก่อนหน้า</button>
+            <span class="gallery__counter" data-gallery-counter aria-live="polite">1 / 5</span>
+            <button class="gallery__button" type="button" data-gallery-next aria-label="ดูภาพถัดไป">ถัดไป</button>
+          </div>
           <figure class="figure">
             <img class="zoomable" data-caption="ต้นแบบ Smart Trashcan" src="PJ/Pj1_ST/realbin.jpg" alt="รูปถังขยะอัจฉริยะต้นแบบจริง" />
-            <figcaption>ต้นแบบฮาร์ดแวร์ของจริง</figcaption>
+            <figcaption>ต้นแบบ Smart Trashcan</figcaption>
           </figure>
           <figure class="figure">
             <img class="zoomable" data-caption="หน้า Web Dashboard" src="PJ/Pj1_ST/web_controlbin.png" alt="หน้าเว็บสำหรับควบคุมถังขยะ" />
